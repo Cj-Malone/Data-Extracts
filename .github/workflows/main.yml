@@ -10,6 +10,7 @@ jobs:
         runs-on: ubuntu-latest
         
         steps:
+            - run: sudo apt install gdal-bin
             - uses: actions/checkout@v2
             - run: ./pull-data.sh
             
