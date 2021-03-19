@@ -2,7 +2,9 @@
 
 OVERPASS_API="https://overpass-api.de/api/interpreter"
 
-mkdir "Data"
+if [ ! -d "Data" ]; then
+	mkdir "Data"
+fi
 PREFIX=$(date +"%Y-%m-%d")
 
 for file in ./Queries/*.ql; do
