@@ -7,7 +7,7 @@ if [ ! -d "Data" ]; then
 fi
 PREFIX=$(date +"%Y-%m-%d")
 
-for file in ./Queries/*.ql; do
+for file in ./Queries/*.overpassql; do
 	QUERY_NAME="${file:10:-3}"
 	QUERY=$(cat "$file")
 	echo "$QUERY_NAME"
